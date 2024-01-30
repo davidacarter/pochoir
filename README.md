@@ -2,9 +2,6 @@
 
 A GIMP plugin to convert any normal image into a stacked set of stencil layers. Useful for planning physical multilayer stencil paintings based on digital artwork or photographs.
 
-
-# Getting started
-
 ## Installation
 See https://en.wikibooks.org/wiki/GIMP/Installing_Plugins
 
@@ -16,11 +13,12 @@ See https://en.wikibooks.org/wiki/GIMP/Installing_Plugins
 5. These masks can be used to cut a set of physical stencils to achieve photorealistic aerosol painting effects.
 6. To simplify to 3 layers, just disregard all layers except for 100%, 50%, and 0%. This will reduce detail and increase contrast but can yield nice results with less effort.
 
-# Example
+## Example
 
-## Before
+### Before
 ![Before](https://github.com/davidacarter/pochoir/blob/main/before.png)
-## After
+
+### After
 ![After](https://github.com/davidacarter/pochoir/blob/main/after.png)
 
-Note the separated layer masks at lower right. The main image is now comprised of a stack of greyscale masks with transparent regions allowing underlying tones to stack correctly as a set of multilayer stencil guides. These can be sent to a printer or laser cutting device.
+Note the new layer masks at lower right. The main image is now comprised of a stack of greyscale masks with transparent regions allowing underlying tones to stack correctly as a set of multilayer stencil guides. These can be sent to a printer or laser cutting device.
