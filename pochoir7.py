@@ -1,4 +1,4 @@
-#!/Applications/GIMP.app/Contents/MacOS/python
+#!/usr/bin/env python
 
 from gimpfu import *
 import gimp
