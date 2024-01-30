@@ -13,7 +13,7 @@ See https://en.wikibooks.org/wiki/GIMP/Installing_Plugins
 2. You should now see `Pochoir7` as one of the filter choices.
 3. Click `Pochoir7` and you should see a set of layers automatically created to break the image into 7 grayscale layers.
 4. These can be cut as physical stencils and used to create photorealistic multilayered stencil paintings.
-5. To simplify to 3 layers, just delete all layers except for 100%, 50%, annd 0%.
+5. To simplify to 3 layers, just delete all layers except for 100%, 50%, and 0%.
 
 # Example
 
