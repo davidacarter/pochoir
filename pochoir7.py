@@ -4,15 +4,17 @@ from gimpfu import *
 import gimp
 
 def pochoir7(image, layer):
-    modethreshold = 5 # histogram luminance
+
+    modethreshold = 5
     contrast = 0.3
     brightness = 0.25
     lowthreshold=0.0
     highthreshold=1.0
+
     pdb.gimp_image_undo_group_start(image)
     drawable = pdb.gimp_image_get_active_drawable(image)
     pdb.gimp_drawable_brightness_contrast(drawable, brightness, contrast)
-    # create layers
+
     layer0 = layer.copy()
     layer1 = layer.copy()
     layer2 = layer.copy()
@@ -20,6 +22,7 @@ def pochoir7(image, layer):
     layer4 = layer.copy()
     layer5 = layer.copy()
     layer6 = layer.copy()
+
     layer0.name="0%"
     layer1.name="17%"
     layer2.name="33%"
@@ -27,6 +30,7 @@ def pochoir7(image, layer):
     layer4.name="83%"
     layer5.name="66%"
     layer6.name="50%"
+
     image.add_layer(layer6, 0)
     image.add_layer(layer5, 0)
     image.add_layer(layer4, 0)
@@ -35,7 +39,7 @@ def pochoir7(image, layer):
     image.add_layer(layer1, 0)
     image.add_layer(layer0, 0)
 
-    #layer0
+    # layer0 0% blacks
     lowthreshold=0.08333
     pdb.gimp_image_set_active_layer(image, layer0)
     drawable = pdb.gimp_image_get_active_drawable(image)
@@ -46,7 +50,7 @@ def pochoir7(image, layer):
     pdb.gimp_context_set_foreground((0,0,0))
     pdb.gimp_drawable_fill(drawable, 0)
 
-    #layer1
+    # layer1 17% darkest grays
     lowthreshold=0.25
     pdb.gimp_image_set_active_layer(image, layer1)
     drawable = pdb.gimp_image_get_active_drawable(image)
@@ -57,7 +61,7 @@ def pochoir7(image, layer):
     pdb.gimp_context_set_foreground((43,43,43))
     pdb.gimp_drawable_fill(drawable, 0)
 
-    #layer2
+    # layer2 33% darker grays
     lowthreshold=0.416666
     pdb.gimp_image_set_active_layer(image, layer2)
     drawable = pdb.gimp_image_get_active_drawable(image)
@@ -68,7 +72,7 @@ def pochoir7(image, layer):
     pdb.gimp_context_set_foreground((85,85,85))
     pdb.gimp_drawable_fill(drawable, 0)
 
-    #layer3
+    # layer3 100% whites
     lowthreshold=0.916666
     pdb.gimp_image_set_active_layer(image, layer3)
     drawable = pdb.gimp_image_get_active_drawable(image)
@@ -78,7 +82,7 @@ def pochoir7(image, layer):
     pdb.gimp_context_set_foreground((255,255,255)) 
     pdb.gimp_drawable_fill(drawable, 0)
 
-    #layer4
+    # layer4 83% lightest grays
     lowthreshold=0.75
     pdb.gimp_image_set_active_layer(image, layer4)
     drawable = pdb.gimp_image_get_active_drawable(image)
@@ -88,7 +92,7 @@ def pochoir7(image, layer):
     pdb.gimp_context_set_foreground((213,213,213))
     pdb.gimp_drawable_fill(drawable, 0)
 
-    #layer5
+    # layer5 66% lighter grays
     lowthreshold=0.583333
     pdb.gimp_image_set_active_layer(image, layer5)
     drawable = pdb.gimp_image_get_active_drawable(image)
@@ -98,7 +102,7 @@ def pochoir7(image, layer):
     pdb.gimp_context_set_foreground((171,171,171))
     pdb.gimp_drawable_fill(drawable, 0)
 
-    #layer6
+    # layer6 50% medium grays
     lowthreshold=0.5
     pdb.gimp_image_set_active_layer(image, layer6)
     drawable = pdb.gimp_image_get_active_drawable(image)
