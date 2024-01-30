@@ -1,6 +1,6 @@
 # pochoir
 
-A GIMP plugin to convert any normal image into a stacked set of stencil layers. Useful for planning physical multilayer stencil paintings based on digital artwork or photography.
+A GIMP plugin to convert any normal image into a stacked set of stencil layers. Useful for planning physical multilayer stencil paintings based on digital artwork or photographs.
 
 
 # Getting started
